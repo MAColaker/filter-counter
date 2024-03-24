@@ -29,7 +29,7 @@ export default Index = () => {
   }, [surahi]);
 
   return (
-    <YStack fullscreen gap="$3" alignItems="center" alignSelf="center">
+    <YStack flex={1} gap="$3" alignItems="center" alignSelf="center">
       <Counter label="Damacana" value={damacana} setValue={setDamacana} />
       <Counter label="Sürahi" value={surahi} setValue={setSurahi} />
     </YStack>
