@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { YStack } from "tamagui";
-
+import WaveBackground from "../components/WaveBackground";
 import Counter from "../components/Counter";
 
 export default Index = () => {
@@ -15,8 +14,10 @@ export default Index = () => {
     const initialValue = JSON.parse(saved);
     return initialValue || 0;
   });
+  const [level, setLevel] = useState(0);
 
   useEffect(() => {
+    setLevel((damacana * 100) / 60);
     localStorage.setItem("damacana", JSON.stringify(damacana));
   }, [damacana]);
 
@@ -29,9 +30,9 @@ export default Index = () => {
   }, [surahi]);
 
   return (
-    <YStack flex={1} gap="$3" alignItems="center" alignSelf="center">
+    <WaveBackground level={level}>
       <Counter label="Damacana" value={damacana} setValue={setDamacana} />
       <Counter label="Sürahi" value={surahi} setValue={setSurahi} />
-    </YStack>
+    </WaveBackground>
   );
 };
