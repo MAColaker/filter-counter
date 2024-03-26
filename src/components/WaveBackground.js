@@ -4,13 +4,14 @@ import Wave from "react-wavify";
 export default WaveBackground = ({ children, level }) => {
   const StyledWave = styled(Wave, {
     bottom: 0,
+    maxHeight: "100vh",
     height: `${level}vh`,
     position: "absolute",
   });
 
   return (
     <View fullscreen flex={1}>
-      <ZStack fullscreen id="bura" position="fixed" flex={1}>
+      <ZStack fullscreen position="fixed" flex={1}>
         <StyledWave
           fill="#00b6ad"
           opacity="0.30"
