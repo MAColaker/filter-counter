@@ -10,8 +10,16 @@ export default Counter = ({ label, value, setValue }) => {
   };
 
   return (
-    <XStack gap="$4">
-      <Label>{label}</Label>
+    <XStack alignItems="center" gap="$4">
+      <Label
+        style={{
+          fontFamily: "sans-serif",
+          fontWeight: 700,
+          fontSize: 20,
+        }}
+      >
+        {label}
+      </Label>
       <XGroup>
         <XGroup.Item>
           <Button onPress={() => buttonPress(false)}>-</Button>
