@@ -1,4 +1,5 @@
 import { XStack, XGroup, Button, Label, Input } from "tamagui";
+import { Plus, Minus } from "@tamagui/lucide-icons";
 
 export default Counter = ({ label, value, setValue }) => {
   const buttonPress = (isAdd) => {
@@ -22,16 +23,17 @@ export default Counter = ({ label, value, setValue }) => {
       </Label>
       <XGroup>
         <XGroup.Item>
-          <Button onPress={() => buttonPress(false)}>-</Button>
+          <Button icon={Minus} onPress={() => buttonPress(false)} />
         </XGroup.Item>
         <XGroup.Item>
           <Input
+            width={"$5"}
             value={value}
             onChange={(e) => setValue(Number(e.target.value))}
           />
         </XGroup.Item>
         <XGroup.Item>
-          <Button onPress={() => buttonPress(true)}>+</Button>
+          <Button icon={Plus} onPress={() => buttonPress(true)} />
         </XGroup.Item>
       </XGroup>
     </XStack>
