@@ -13,7 +13,7 @@ export default WaveBackground = ({ children, level }) => {
     <View fullscreen flex={1}>
       <ZStack fullscreen position="fixed" flex={1}>
         <StyledWave
-          fill="#00b6ad"
+          fill="#74ccf4"
           opacity="0.30"
           options={{
             height: 1,
@@ -23,7 +23,7 @@ export default WaveBackground = ({ children, level }) => {
           }}
         />
         <StyledWave
-          fill="#00959e"
+          fill="#1ca3ec"
           opacity="0.80"
           options={{
             height: 3,
@@ -33,7 +33,7 @@ export default WaveBackground = ({ children, level }) => {
           }}
         />
         <StyledWave
-          fill="#01838a"
+          fill="#2389da"
           opacity="0.5"
           options={{
             height: 5,
